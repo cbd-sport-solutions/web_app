@@ -4,4 +4,5 @@ class BaseController < ApplicationController
     @user = User.find(params[:id])
     render :404 unless User.admin?
   end
+  
 end

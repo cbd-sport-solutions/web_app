@@ -1,4 +1,3 @@
-class Admin::DashboardController < BaseController
-  before_action :check_auth
+class Admin::DashboardController < AdminController
 
 end

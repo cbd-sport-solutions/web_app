@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :products, only: [:index, :show]
-  resources :orders, only: [:show, :update]
+  resources :orders, only: [:show, :update, :new]
   get "/cart", to: "carts#show"
   put "/cart", to: "carts#update"
   delete "/cart", to: "carts#destroy"
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    resources :products, only: [:create, :edit, :destroy]
+    resources :products, only: [:create, :edit, :destroy, :new]
     resources :orders
     get "/dashboard", to: "dashboard#index"
   end

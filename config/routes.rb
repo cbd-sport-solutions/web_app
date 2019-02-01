@@ -3,8 +3,15 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :products, only: [:index, :show]
+  resources :orders, only: [:show, :update]
+  get "/cart", to: "carts#show"
+  put "/cart", to: "carts#update"
+  delete "/cart", to: "carts#destroy"
+
+
 
   namespace :admin do
     resources :products, only: [:create, :edit, :destroy]
+    resources :orders
   end
 end

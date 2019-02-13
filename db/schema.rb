@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190125194542) do
+ActiveRecord::Schema.define(version: 20190128192100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pgcrypto"
 
   create_table "comments", force: :cascade do |t|
     t.bigint "product_id"
@@ -22,6 +23,15 @@ ActiveRecord::Schema.define(version: 20190125194542) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_comments_on_product_id"
+  end
+
+  create_table "orders", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.float "total_price"
+    t.string "purchaser_name"
+    t.string "shipping_address"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -39,7 +49,7 @@ ActiveRecord::Schema.define(version: 20190125194542) do
     t.string "last_name"
     t.boolean "admin", default: false
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

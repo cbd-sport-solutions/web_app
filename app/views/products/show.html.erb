@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="content-wrapper">
+      <div class="row">
+				<div class="col-md-12">
+					<div class="product col-md-3 service-image-left" style="background-image: url(<%= @product.image %>);
+            background-size: auto;">
+					</div>
+				</div>
+
+				<div class="col-md-7">
+					<div class="product-title"> <%= @product.name %> </div>
+					<div class="product-desc"> <%= @product.description %> </div>
+					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+					<hr>
+					<div class="product-price"> <%= @product.price_range %> </div>
+					<hr>
+					<div class="btn-group cart">
+						<button type="button" class="btn btn-success">
+							Add to cart
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="col-md-12 product-info">
+					<ul id="myTab" class="nav nav-tabs">
+
+						<li class="nav-item active">
+              <a href="#service-one" data-toggle="tab">COMMENTS</a>
+            </li>
+						<li class="nav-item">
+              <% if @product.how_to_use %>
+                <a href="#service-two" data-toggle="tab">HOW TO USE</a>
+              <% end %>
+            </li>
+						<li class="nav-item">
+              <% if @product.key_ingredients %>
+                <a href="#service-three" data-toggle="tab">KEY INGREDIENTS</a>
+              <% end %>
+            </li>
+
+					</ul>
+				<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active" id="service-one">
+
+							<section class="container product-info">
+                <% if @product.comments %>
+  								<% @product.comments.each do |comment| %>
+                    <%= comment %>
+                  <% end %>
+                <% else %>
+                  <p>Be the first to comment...</p>
+                <% end %>
+							</section>
+
+						</div>
+					<div class="tab-pane fade" id="service-two">
+
+						<section class="container product-info">
+              <% if @product.how_to_use %>
+                <p class="how-to-use"> <%= @product.how_to_use %> </p>
+              <% end %>
+						</section>
+
+					</div>
+					<div class="tab-pane fade" id="service-three">
+            <section class="container product-info">
+              <% if @product.key_ingredients %>
+                <p class="how-to-use"> <%= @product.key_ingredients %> </p>
+              <% end %>
+            </section>
+					</div>
+				</div>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>

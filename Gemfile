@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'webpacker', '= 3.5.5'
 gem 'foreman', '= 0.64.0'
+gem 'bootstrap'
+gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -3,9 +3,7 @@
 
     <div class="row">
 
-      <div class="col-lg-3">
-
-      </div>
+      <center>
       <!-- /.col-lg-3 -->
 
       <div class="col-lg-9">
@@ -19,11 +17,14 @@
           <div class="carousel-inner" role="listbox">
             <!-- Implement featured Items -->
 
+            <% i = 0 %>
             <% @featured_products.each do |featured_product| %>
-              <div class="carousel-item active">
+              <% active = "active" if i == 0 %>
+              <div class="carousel-item <%= active %>">
                 <%= image_tag featured_product.image, class: "d-block img-fluid"%>
                 <%= featured_product.description %>
               </div>
+              <% i += 1 %>
             <% end %>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -59,6 +60,7 @@
 
       </div>
       <!-- /.col-lg-9 -->
+    </center>
 
     </div>
     <!-- /.row -->

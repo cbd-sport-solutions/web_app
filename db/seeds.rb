@@ -12,7 +12,7 @@ p "Seeding products"
   Product.create!(name: "Product #{i}",
     price: 29.99,
     description: "This is a long description about how this is going to take up too much room and needs to be shortened #{i}",
-    image: "https://picsum.photos/200/300/?random",
+    image: "https://picsum.photos/900/400/?random",
     score: rand(0.0..5.0).round(2)
   )
   i += 1

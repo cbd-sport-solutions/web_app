@@ -16,6 +16,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module CbdBackend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -25,6 +26,9 @@ module CbdBackend
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.generators do |g|
+      g.orm :active_record, primary_key_type: :uuid
+    end
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

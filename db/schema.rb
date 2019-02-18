@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190128192100) do
+ActiveRecord::Schema.define(version: 20190218195721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,14 +34,22 @@ ActiveRecord::Schema.define(version: 20190128192100) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_options", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.bigint "product_id"
+    t.string "quantity"
+    t.float "price"
+    t.index ["product_id"], name: "index_product_options_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.float "price"
     t.string "description"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "score"
+    t.string "how_to_use"
+    t.string "key_ingredients"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,4 +63,5 @@ ActiveRecord::Schema.define(version: 20190128192100) do
   end
 
   add_foreign_key "comments", "products"
+  add_foreign_key "product_options", "products"
 end

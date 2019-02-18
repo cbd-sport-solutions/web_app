@@ -22,7 +22,7 @@
               <% active = "active" if i == 0 %>
               <div class="carousel-item <%= active %>">
                 <%= image_tag featured_product.image, class: "d-block img-fluid"%>
-                <%= featured_product.description %>
+                <%= truncate(featured_product.description, length: 150) { link_to " See more", product_path(featured_product)} %>
               </div>
               <% i += 1 %>
             <% end %>
@@ -44,10 +44,10 @@
                 <a href="#"> <%= image_tag product.image, class: "card-img-top" %> </a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#"> <%= product.name %> </a>
+                    <%= link_to product.name, product_path(product) %>
                   </h4>
-                  <h5> <%= number_to_currency(product.price) %> </h5>
-                  <p class="card-text"> <%= product.description %> </p>
+                  <h5> <%= product.price_range %> </h5>
+                  <p class="card-text"> <%= truncate(product.description, length: 250) { link_to " See more", product_path(product) } %> </p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted"> <%= product.score %>/5 </small>

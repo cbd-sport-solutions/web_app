@@ -12,7 +12,7 @@
 					<div class="product-desc"> <%= @product.description %> </div>
 					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
 					<hr>
-					<div class="product-price"> <%= @product.price_range %> </div>
+					<div class="product-price"> <%= select_tag "product-options", options_from_collection_for_select(@product.product_options, "id", "quantity", "id"), { class: "form-control" } %> </div>
 					<hr>
 					<div class="btn-group cart">
 						<%= button_to "Add to Cart", carts_path(product: @product.id), class: "btn btn-success" %>
@@ -77,5 +77,5 @@
 </div>
 
 <script>
-  
+
 </script>

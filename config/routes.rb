@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :orders, only: [:show, :update, :new]
-  get "/cart", to: "carts#show"
-  put "/cart", to: "carts#update"
-  delete "/cart", to: "carts#destroy"
+  resources :carts, only: [:show, :create, :destroy]
+  # get "/cart", to: "carts#show"
+  # post "/cart", to: "carts#create"
+  # delete "/cart", to: "carts#destroy"
 
 
 

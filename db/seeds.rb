@@ -11,8 +11,8 @@ p "Seeding products"
     description: "Recovery can taste good! And by incorporating an Asteroid gummy into your diet, you can ensure you’re on your quickest path to recovery. Each star is loaded with 25 mg of the purest CBD isolate found in the market today. This plant-based recipe means that Asteroids are great for everyone, regardless of your diet. Easily toss an Asteroid pack into your camel back or day pack or give as a treat to your kid to obtain your best health and keep your body balanced throughout the day.",
     image: "https://picsum.photos/900/400/?random",
     score: 0.0,
+    active: true
   )
-  ProductOption.create!(product_id: prod.id, price: 11.91, quantity: "5 Pack")
   ProductOption.create!(product_id: prod.id, price: 19.83, quantity: "10 Pack")
   ProductOption.create!(product_id: prod.id, price: 34.23, quantity: "20 Pack")
   prod = Product.create!(name: "CBD Sport Solutions CBD Isolate Droppers",
@@ -24,8 +24,8 @@ p "Seeding products"
     Topical: Apply the Dropper to your skin and gently massage in.",
     key_ingredients: "Coconut Oil: Due to the easy digestion of coconut oil, utilizing this carrier provides the highest bioavailability for consumers.
     Cannabis-Derived Terpenes: Optimize more of the cannabis plant by adding cannabis-derived terpenes to your Dropper.",
+    active: true
   )
-  ProductOption.create!(product_id: prod.id, price: 12.00, quantity: "250mg")
   ProductOption.create!(product_id: prod.id, price: 18.00, quantity: "500mg")
   ProductOption.create!(product_id: prod.id, price: 30.80, quantity: "1000mg")
   ProductOption.create!(product_id: prod.id, price: 72.00, quantity: "2500mg")
@@ -37,11 +37,11 @@ p "Seeding products"
     how_to_use: "Take capsules orally as needed",
     key_ingredients: "Powdered Coconut Oil:Gentle on your stomach for easier digestion.
     CBD Isolate: Pure CBD isolate derived from hemp.
-    Gelatin Capsule: Each capsule is made with a gelatin casing."
+    Gelatin Capsule: Each capsule is made with a gelatin casing.",
+    active: true
   )
-  ProductOption.create!(product_id: prod.id, price: 64.08, quantity: "100 count 10mg capsules")
   ProductOption.create!(product_id: prod.id, price: 115.12, quantity: "100 count 25mg capsules")
-  ProductOption.create!(product_id: prod.id, price: 370.08, quantity: "100 count 100mg capsules")
+  ProductOption.create!(product_id: prod.id, price: 38.00, quantity: "30 count 25mg capsules")
   prod = Product.create!(name: "CBD Sport Solutions Isolate P.M. Capsules",
     description: "It’s been proven over and over that most of our physical recovery happens during sleep. This brings a very important point to making sure that you’re getting a restful night’s sleep. Why not boost this P.M. recovery with our CBD Sport Solutions PM capsule which features a small 3 mg dose of melatonin to increase the amount of melatonin in the body for a better night’s rest.  Melatonin (an essential hormone) is most commonly known for sleep inducing properties. Additionally, Melatonin is used in some cases to treat breast and prostate cancer, negative menopause symptoms, an immune strengthener, and chronic pain reliever. We all have naturally producing melatonin that is produced in the pineal gland. When it starts to get dark, our melatonin levels increase which promotes sleep. Once it becomes light outside, melatonin levels begin to decrease. Ultimately, your sleep and wake cycles are determined by how much melatonin you are producing. 
     Both CBD and melatonin are important in regulating REM and NREM.",
@@ -50,7 +50,8 @@ p "Seeding products"
     how_to_use: "Take capsules orally 45-60 minutes before bed as needed.",
     key_ingredients: "CBD Isolate: Regulates our sleep cycle.
     Powdered Coconut Oil: Offers same benefits of Coconut Oil but in powdered form.
-    Melatonin: Adjust your body’s internal clock and regulate your sleep cycle."
+    Melatonin: Adjust your body’s internal clock and regulate your sleep cycle.",
+    active: false
   )
   ProductOption.create!(product_id: prod.id, price: 63.74, quantity: "50 count 25mg capsules")
   ProductOption.create!(product_id: prod.id, price: 130.33, quantity: "100 count 25mg capsules")
@@ -64,23 +65,13 @@ p "Seeding products"
     how_to_use: "Take capsules orally as needed.",
     key_ingredients: "CBD Isolate: Helps to reduce the side effects of Caffeine.
     Powdered Coconut Oil: Can be easier on the digestive system.
-    Caffeine: Derived from organic coffee beans for a natural boost of energy."
+    Caffeine: Derived from organic coffee beans for a natural boost of energy.",
+    active: false
   )
   ProductOption.create!(product_id: prod.id, price: 63.74, quantity: "50 count 25mg capsules")
   ProductOption.create!(product_id: prod.id, price: 130.33, quantity: "100 count 25mg capsules")
   ProductOption.create!(product_id: prod.id, price: 191.22, quantity: "50 count 100mg capsules")
   ProductOption.create!(product_id: prod.id, price: 385.29, quantity: "100 count 100mg capsules")
-  prod = Product.create!(name: "CBD Sport Sort Solutions Absolute Zero CBD Isolate Powder",
-    description: "There is no shortage of claims about CBD and it’s benefits. What better way to incorporate CBD into your daily routine than this Absolute Zero 99% Pure CBD Powder. Easily add this product to any food or drink to experience the awesome healing power of CBD. Or you can add to your favorite daily moisturizer!",
-    image: "https://picsum.photos/900/400/?random",
-    score: 0.0,
-    how_to_use: "Inhalation: Vaporize Absolute Zero or add it to any joint you are rolling.
-    Ingestion: Try adding Absolute Zero into any food or drink recipe
-    Topical: Have your favorite topical products? Just add CBD!",
-    key_ingredients: "Cannabis-Derived Terpenes: Adding a strain-specific terpene profile to your AZ contributes to the entourage effect"
-  )
-  ProductOption.create!(product_id: prod.id, price: 90.00, quantity: "3.5 Gram (3500mg)")
-  ProductOption.create!(product_id: prod.id, price: 175.00, quantity: "7 Gram (7000mg)")
   prod = Product.create!(name: "CBD Sport Solutions NANO Detox Shots",
     description: "Loaded with nutrients, the NANO CBD Detox Shot offers a single-serving of superfoods. Hard night out, no problem, just drink one of our NANO Detox shots and be on your way to recovery. Or when you’re coming down with a cold or need a little extra boost. This little powerhouse has your back. The unique Detox formula helps to fight inflammation, lose weight, boost energy, support digestion, and cleanse the liver.
     Studies have shown that detoxing the body of everyday environmental chemicals is essential to living a healthy lifestyle.",
@@ -93,7 +84,8 @@ p "Seeding products"
     Ginger: Helps eliminate stomach discomfort and common digestive issues.
     Beet Root Powder:One of the best ways to detox the body.
     Vitamin B Complex:Contains cleansing properties to quickly remove toxins.
-    Vitamin C: Boost your immune system and replenish the body."
+    Vitamin C: Boost your immune system and replenish the body.",
+    active: false
   )
   ProductOption.create!(product_id: prod.id, price: 5.50, quantity: "1 Bottle")
   prod = Product.create!(name: "CBD Sport Solutions NANO Energy Shots",
@@ -105,7 +97,8 @@ p "Seeding products"
     Vitamin B Complex: Converts foods you eat into natural energy.
     Ginger: Improves blood circulation to reduce fatigue.
     Taurine: In combination with B vitamins, Taurine reduces sleepiness and improves reaction time.
-    Eleuthero: Improves all aspects of human performance; improves memory, adapt to stress, prevents fatigue, and boosts the immune system."
+    Eleuthero: Improves all aspects of human performance; improves memory, adapt to stress, prevents fatigue, and boosts the immune system.",
+    active: true
   )
   ProductOption.create!(product_id: prod.id, price: 5.50, quantity: "1 Bottle")
   prod = Product.create!(name: "CBD Sport Solutions NANO Rest Shots",
@@ -116,7 +109,8 @@ p "Seeding products"
     key_ingredients: "NANO CBD: CBD particles ranging from .01 to 100 nanometers.
     Valerian Root: Used mainly for inability to sleep.
     Melatonin: Helps control when to fall asleep and wake up.
-    Tryptophan: Amino acid essential for optimal sleep and mood."
+    Tryptophan: Amino acid essential for optimal sleep and mood.",
+    active: false
   )
   ProductOption.create!(product_id: prod.id, price: 5.50, quantity: "1 Bottle")
   prod = Product.create!(name: "CBD Sport Solutions NANO Freeze Point topical creams",
@@ -127,10 +121,24 @@ p "Seeding products"
     key_ingredients: "Peppermint Oil: Known as a natural painkiller and muscle relaxant. When applied topically, reduce sore, achy muscles and tension headaches.
     Eucalyptus Oil: Application of eucalyptus oil to the skin helps with relieving pain and stress.
     Camphor: Stimulate nerves and relieves pain. Camphor oil works to reduce inflammation and pain symptoms.
-    Menthol: Minor aches and pains are commonly treated with menthol. *Avoid your eyes!"
+    Menthol: Minor aches and pains are commonly treated with menthol. *Avoid your eyes!",
+    active: false
   )
   ProductOption.create!(product_id: prod.id, price: 14.00, quantity: "2 oz 250mg")
   ProductOption.create!(product_id: prod.id, price: 35.99, quantity: "2 oz. 1000mg EXTRA STRENGTH")
   ProductOption.create!(product_id: prod.id, price: 39.27, quantity: "8 oz. 1000mg pump bottle")
+  prod = Product.create!(name: "CBD Sport Solutions NANO Freeze Point Salve Stick",
+    description: "Experience the deep-rooted benefits of our Nano CBD salve stick, used as a topical application. It’s the same product as our Nano Freeze Point cream but in a convenient Salve Stick. This application method keeps your hands free of oils. This is a great benefit for Rock Climbers, Weight Lifters, or any situation where greasy hands could spell disaster.",
+    image: "https://picsum.photos/900/400/?random",
+    score: 0.0,
+    how_to_use: "Work desired amount Freezing Point Salve between your fingers then apply topically to an area. A Freezing Point Stick offers easy and convenient application of a pain salve.",
+    key_ingredients: "Peppermint Oil: Known as a natural painkiller and muscle relaxant. When applied topically, reduce sore, achy muscles and tension headaches.
+    Eucalyptus Oil: Application of eucalyptus oil to the skin helps with relieving pain and stress.
+    Camphor: Stimulate nerves and relieves pain. Camphor oil works to reduce inflammation and pain symptoms.
+    Menthol: Minor aches and pains are commonly treated with menthol. *Avoid your eyes!
+    Beeswax: Studies demonstrate application of beeswax works to reduce swelling while decreasing pain and inflammation.",
+    active: true
+  )
+  ProductOption.create!(product_id: prod.id, price: 26.50, quantity: "1 salve stick")
 end_time = Time.now
 p "Products seeded; total time was #{end_time - start_time}"

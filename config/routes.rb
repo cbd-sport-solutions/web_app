@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :orders, only: [:show, :update, :new]
   resources :carts, only: [:show, :create, :destroy]
+  get "/coming-soon", to: "coming#index"
   # get "/cart", to: "carts#show"
   # post "/cart", to: "carts#create"
   # delete "/cart", to: "carts#destroy"

@@ -1,9 +1,8 @@
 class AdminController < ApplicationController
-  before_action :check_auth
+  before_action :require_admin
 
-  def check_auth
-    @user = User.find(params[:id])
-    # render :404 unless User.admin?
+  def require_admin
+    render file: "/public/404" unless current_admin?
   end
 
 end

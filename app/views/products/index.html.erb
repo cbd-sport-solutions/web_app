@@ -35,7 +35,11 @@
                   <% end %>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted"> <%= product.score %>/5 </small>
+                  <% if product.score == 0 %>
+                    <small class="text-muted">No ratings</small>
+                  <% else %>
+                    <small class="text-muted"> <%= product.score %>/5 </small>
+                  <% end %>
                 </div>
               </div>
             </div>

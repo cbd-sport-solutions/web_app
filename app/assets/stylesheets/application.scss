@@ -331,3 +331,24 @@ ul.dropdown-cart li .item-right button{
   height: 300px;
   width: 150px;
 }
+
+.po-price {
+  align-items: stretch;
+}
+
+.po-quantity {
+  align-items: stretch;
+
+}
+
+.po-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: column;
+}

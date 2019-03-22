@@ -1,7 +1,7 @@
 class ComingController < ApplicationController
 
   def index
-    @coming_soon = true
+    @coming_soon = false
   end
 
 end

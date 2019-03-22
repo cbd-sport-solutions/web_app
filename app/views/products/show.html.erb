@@ -1,70 +1,30 @@
 <div class="container-fluid">
-    <div class="content-wrapper">
-      <div class="row">
-				<div class="col-md-12">
-					<div class="product col-md-3 service-image-left" style="background-image: url(<%= @product.image %>);
-            background-size: auto;">
-					</div>
-				</div>
-
-				<div class="col-md-7">
-					<div class="product-title"> <%= @product.name %> </div>
-					<div class="product-desc"> <%= @product.description %> </div>
-					<hr>
-					<div class="product-price">
-            <% @product.product_options.each do |po| %>
-              <div class="po-container">
-                <div class="po-quantity"> <%= po.quantity %> </div>
-                <div class="po-price"> <%= number_to_currency(po.price) %></div>
-              </div>
-            <% end %>
-          </div>
-					<hr>
-          <div class="to-order">
-            To order, contact Matthew Thomas:<br>720.422.1234<br>info@cbdsportsolutions.com</p>
-          </div>
+  <div class="content-wrapper">
+    <div class="row">
+			<div class="col-md-12">
+				<div class="product col-md-3 service-image-left" style="background-image: url(<%= @product.image %>);
+          background-size: contain;
+          background-repeat: no-repeat;">
 				</div>
 			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="col-md-12 product-info">
-					<ul id="myTab" class="nav nav-tabs">
-            <% if @product.how_to_use %>
-  						<li class="nav-item">
-                <a href="#service-two" data-toggle="tab">HOW TO USE</a>
-              </li>
-            <% end %>
-            <% if @product.key_ingredients %>
-  						<li class="nav-item">
-                <a href="#service-three" data-toggle="tab">KEY INGREDIENTS</a>
-              </li>
-            <% end %>
 
-					</ul>
-				<div id="myTabContent" class="tab-content">
-					<div class="tab-pane fade active" id="service-two">
-
-						<section class="container product-info">
-              <% if @product.how_to_use %>
-                <p class="how-to-use"> <%= @product.how_to_use %> </p>
-              <% end %>
-						</section>
-
-					</div>
-					<div class="tab-pane fade" id="service-three">
-            <section class="container product-info">
-              <% if @product.key_ingredients %>
-                <p class="how-to-use"> <%= @product.key_ingredients %> </p>
-              <% end %>
-            </section>
-					</div>
-				</div>
+			<div class="col-md-7">
+				<div class="product-title"> <%= @product.name %> </div>
+				<div class="product-desc"> <%= @product.description %> </div>
 				<hr>
+				<div class="product-price">
+          <% @product.product_options.each do |po| %>
+            <div class="po-container">
+              <div class="po-quantity"> <%= po.quantity %> </div>
+              <div class="po-price"> <%= number_to_currency(po.price) %></div>
+            </div>
+          <% end %>
+        </div>
+				<hr>
+        <div class="to-order">
+          To order, contact Matthew Thomas:<br>720.422.1234<br>info@cbdsportsolutions.com</p>
+        </div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<script>
-
-</script>

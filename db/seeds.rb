@@ -9,7 +9,7 @@ start_time = Time.now
 p "Seeding products"
   prod = Product.create!(name: "CBD Sport Solution Isolate Gummies",
     description: "Recovery can taste good! And by incorporating an Asteroid gummy into your diet, you can ensure you’re on your quickest path to recovery. Each star is loaded with 25 mg of the purest CBD isolate found in the market today. This plant-based recipe means that Asteroids are great for everyone, regardless of your diet. Easily toss an Asteroid pack into your camel back or day pack or give as a treat to your kid to obtain your best health and keep your body balanced throughout the day.",
-    image: "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    image: 'rewebsiteupdates/IMG_8931.jpg',
     score: 0.0,
     active: true
   )
@@ -17,7 +17,7 @@ p "Seeding products"
   ProductOption.create!(product_id: prod.id, price: 34.23, quantity: "20 Pack")
   prod = Product.create!(name: "CBD Sport Solutions CBD Isolate Droppers",
     description: "One drop contains just .5 mg, 1, 2, 4 or 8.5 mg of pure hemp-derived CBD isolate. This mixture ratio of coconut oil to CBD allows the you to choose a low amount of CBD or a higher amount, depending on the magnitude of effects and recovery one needs. New users to CBD find that this product is ideal for starting out due to the ability to take one drop or multiple. Easily add CBD to your protein shakes, smoothies, coffee or even use topically to target areas or soreness, or just take orally by placing drops under your tongue. *This product is safe for pets too! Just start with the smallest dose for your furry pal for sore joints and other ailments.",
-    image: "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    image: "rewebsiteupdates/IMG_8963.jpg",
     score: 0.0,
     how_to_use: "Oral: Drop desired amount of CBD under your tongue to let absorb for up to a minute.
     Ingestion: Add a few drops to your favorite recipes for delicious CBD infused meals.
@@ -32,7 +32,7 @@ p "Seeding products"
   ProductOption.create!(product_id: prod.id, price: 128.00, quantity: "5000mg")
   prod = Product.create!(name: "CBD Sport Solutions Isolate Capsules",
     description: "Let’s face it, in todays day and age who has the time to measure their dosages. Instead just reach for your bottle of CDB Sport Solutions Isolate Capsules with exact amounts ranging from 25mg, 50mg 0r 100mg per capsule. Swallowing a single capsule can take 30 to 100 minutes for the effects to set in but the duration will last longer than alternative delivery methods. Take before your next big race, after big training session. Consumption of a CBD Isolate Capsule in the morning and/or at night is also a great regimen for CBD.",
-    image: "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    image: "rewebsiteupdates/IMG_8939.jpg",
     score: 0.0,
     how_to_use: "Take capsules orally as needed",
     key_ingredients: "Powdered Coconut Oil:Gentle on your stomach for easier digestion.
@@ -90,7 +90,7 @@ p "Seeding products"
   ProductOption.create!(product_id: prod.id, price: 5.50, quantity: "1 Bottle")
   prod = Product.create!(name: "CBD Sport Solutions NANO Energy Shots",
     description: "The energy shot you come know and love! With special bled of herbs and superfoods, our NANO Energy Shot gives you a natural boost of energy throughout the day. Whether you need a boost to your weekly routine, an afternoon pick-me- up, or a little extra something to get through your workout, This little monster NANO Energy Shot gives you the much needed boost without jitters or a crash. Utilizing our NANO CBD formula, a drink of a NANO Energy Shot will offer the maximum benefits of CBD while working with other natural ingredients to support energy.",
-    image: "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    image: "rewebsiteupdates/IMG_8985.jpg",
     score: 0.0,
     how_to_use: "Shake up your NANO Energy Shot and enjoy!",
     key_ingredients: "NANO CBD: Microscopic CBD particles for higher bioavailability.
@@ -129,7 +129,7 @@ p "Seeding products"
   ProductOption.create!(product_id: prod.id, price: 39.27, quantity: "8 oz. 1000mg pump bottle")
   prod = Product.create!(name: "CBD Sport Solutions NANO Freeze Point Salve Stick",
     description: "Experience the deep-rooted benefits of our Nano CBD salve stick, used as a topical application. It’s the same product as our Nano Freeze Point cream but in a convenient Salve Stick. This application method keeps your hands free of oils. This is a great benefit for Rock Climbers, Weight Lifters, or any situation where greasy hands could spell disaster.",
-    image: "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    image: "rewebsiteupdates/Salve IMG_8948.jpg",
     score: 0.0,
     how_to_use: "Work desired amount Freezing Point Salve between your fingers then apply topically to an area. A Freezing Point Stick offers easy and convenient application of a pain salve.",
     key_ingredients: "Peppermint Oil: Known as a natural painkiller and muscle relaxant. When applied topically, reduce sore, achy muscles and tension headaches.
